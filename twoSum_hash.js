@@ -24,14 +24,14 @@
 
 
 var twoSum = function(nums, target) {
-  var hash = {};
+  var hash = {}; //create hash which stores values as keys and index as value
   for(var i = 0; i<nums.length;i++){
-    let neededval = target - nums[i]
+    let neededval = target - nums[i] //iterate thru loop and find needed companion value 
     if (hash[neededval]){
-      return([hash[neededval],i])
+      return([hash[neededval],i]) //if needed value found in hash then return along with current index as these are two values that sum up to target
     }
     else{
-      hash[nums[i]]=i
+      hash[nums[i]]=i //otherwise add current value and index to hash for reference later
     }
   }
 };
