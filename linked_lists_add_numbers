@@ -1,0 +1,26 @@
+var addTwoNumbers = function(l1, l2) {
+    var arr_one = []
+    var runner = l1
+    while(runner !== null ){
+      arr_one.push(runner.val)
+      runner=runner.next
+    }
+    
+
+    console.log('L2', l2)
+    var arr_two = []
+    var runner2 = l2
+    while(runner2 !== null ){
+      arr_two.push(runner2.val)
+      runner2=runner2.next
+    }
+    
+
+    var number = Number(arr_one.reverse().join('')) + Number (arr_two.reverse().join(''))
+    
+    number = number.toString().split('').reverse()
+    
+    return number.map(function(item){
+        return Number(item)
+    })
+};
